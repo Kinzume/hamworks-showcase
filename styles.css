@@ -1,0 +1,391 @@
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch&family=Press+Start+2P&display=swap");
+
+/* Reset */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+        v2.0 | 20110126
+        License: none (public domain)
+     */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* ================================================================================================== */
+
+.intro {
+  font-family: "Chakra Petch", sans-serif;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-sizing: border-box;
+  background-color: black;
+  height: 100vh;
+  width: 100vw;
+  padding: 0 5vw;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.overflow {
+  height: 3rem;
+  overflow: hidden;
+}
+h1 {
+  padding-top: 0;
+  font-size: 3rem;
+  color: white;
+  display: flex;
+}
+.intro > .overflow:nth-child(even) > h1 {
+  justify-content: flex-end;
+}
+
+.images-container {
+  background-color: white;
+  margin-top: 100vh;
+  height: 100%;
+  mix-blend-mode: difference;
+}
+
+/* animations */
+.animate {
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-name: animate-fade;
+  animation-name: animate-fade;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+  -webkit-animation-fill-mode: backwards;
+  animation-fill-mode: backwards;
+}
+
+.delay-1 {
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+.delay-2 {
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+}
+.delay-3 {
+  -webkit-animation-delay: 0.7s;
+  animation-delay: 0.7s;
+}
+
+@-webkit-keyframes animate-fade {
+  0% {
+    opacity: 0%;
+    margin-top: 15rem;
+  }
+  100% {
+    opacity: 100%;
+    margin-top: 0;
+  }
+}
+
+@keyframes animate-fade {
+  0% {
+    opacity: 0%;
+    margin-top: 15rem;
+  }
+  100% {
+    opacity: 100%;
+    margin-top: 0;
+  }
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .animate {
+    -webkit-animation: none !important;
+    animation: none !important;
+  }
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+.images {
+  display: flex;
+  flex-wrap: wrap;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.images > li:nth-child(6n + 1) {
+  width: 100%;
+  padding-top: 3rem;
+  padding-right: 3rem;
+  padding-left: 0rem;
+}
+.images > li:nth-child(6n + 2) {
+  width: 100%;
+  padding-top: 4rem;
+  padding-right: 2rem;
+  padding-left: 1rem;
+}
+.images > li:nth-child(6n + 3) {
+  width: 100%;
+  padding-top: 5rem;
+  padding-right: 1rem;
+  padding-left: 4rem;
+}
+.images > li:nth-child(6n + 4) {
+  width: 56%;
+  padding-top: 2rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+.images > li:nth-child(6n + 5) {
+  width: 100%;
+  padding-top: 8rem;
+  padding-right: 0rem;
+  padding-left: 2rem;
+}
+.images > li:nth-child(6n + 6) {
+  width: 100%;
+  padding-top: 2rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  padding-bottom: 2rem;
+}
+
+@media (min-width: 640px) {
+  h1 {
+    font-size: 4.6rem;
+  }
+  .overflow {
+    height: 4.6rem;
+  }
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 8rem;
+  }
+  .overflow {
+    height: 8rem;
+  }
+  .images > li:nth-child(6n + 1) {
+    width: 34%;
+    padding-top: 8rem;
+    padding-right: 3rem;
+    padding-left: 2rem;
+  }
+  .images > li:nth-child(6n + 2) {
+    width: 53%;
+    padding-top: 4rem;
+    padding-right: 0rem;
+  }
+  .images > li:nth-child(6n + 3) {
+    width: 100%;
+    padding-top: 5rem;
+    padding-right: 3rem;
+    padding-left: 4rem;
+  }
+  .images > li:nth-child(6n + 4) {
+    width: 47%;
+    padding-top: 2rem;
+    padding-right: 2rem;
+    padding-left: 10rem;
+  }
+  .images > li:nth-child(6n + 5) {
+    width: 100%;
+    padding-top: 8rem;
+    padding-right: 0rem;
+    padding-left: 17rem;
+  }
+  .images > li:nth-child(6n + 6) {
+    width: 100%;
+    padding-top: 2rem;
+    padding-right: 10rem;
+    padding-left: 5rem;
+    padding-bottom: 5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 12rem;
+  }
+  .overflow {
+    height: 12rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  h1 {
+    font-size: 12rem;
+  }
+  .overflow {
+    height: 12rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  h1 {
+    font-size: 15rem;
+  }
+  .overflow {
+    height: 15rem;
+  }
+  .images > li:nth-child(6n + 1) {
+    width: 25%;
+    padding-top: 16rem;
+    padding-right: 3rem;
+    padding-left: 2rem;
+  }
+  .images > li:nth-child(6n + 2) {
+    width: 63%;
+    padding-top: 27rem;
+    padding-right: 5rem;
+  }
+  .images > li:nth-child(6n + 3) {
+    width: 48%;
+    padding-top: 18rem;
+    padding-right: 1rem;
+    padding-left: 0rem;
+  }
+  .images > li:nth-child(6n + 4) {
+    width: 36%;
+    padding-top: 4rem;
+  }
+  .images > li:nth-child(6n + 5) {
+    width: 100%;
+    padding-top: 10rem;
+    padding-right: 33rem;
+    padding-left: 7rem;
+  }
+  .images > li:nth-child(6n + 6) {
+    width: 58%;
+    padding-top: 15rem;
+    padding-left: 31rem;
+    padding-bottom: 13rem;
+  }
+}
